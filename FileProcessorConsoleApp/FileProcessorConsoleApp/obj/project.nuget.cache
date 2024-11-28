@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "4EKR67bI8hU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\1000075326\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0\\system.configuration.configurationmanager.9.0.0.nupkg.sha512",
+    "C:\\Users\\1000075326\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.0\\system.diagnostics.eventlog.9.0.0.nupkg.sha512",
+    "C:\\Users\\1000075326\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0\\system.security.cryptography.protecteddata.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
