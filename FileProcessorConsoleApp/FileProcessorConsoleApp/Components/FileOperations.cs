@@ -16,41 +16,49 @@ namespace FileProcessorConsoleApp.Components
 
         public void ProcessFiles(string inputFolder, string correctFolder, string errorFolder, string sampleFolder)
         {
-            string[] files = Directory.GetFiles(inputFolder);
-            foreach (var file in files)
+            _logger.LogInformation("Starting {MethodName}", nameof(ProcessFiles));
+            try
             {
-                string fileName = Path.GetFileName(file);
-                try
+                string[] files = Directory.GetFiles(inputFolder);
+                foreach (var file in files)
                 {
-                    if (Path.GetExtension(file).Equals(".txt", StringComparison.OrdinalIgnoreCase))
+                    string fileName = Path.GetFileName(file);
+                    try
                     {
-                        string content = File.ReadAllText(file); // Read
-                        _logger.LogInformation("Processing file: {FileName}", fileName);
-                        _logger.LogDebug("File content: {Content}", content);
+                        if (Path.GetExtension(file).Equals(".txt", StringComparison.OrdinalIgnoreCase))
+                        {
+                            string content = File.ReadAllText(file);
+                            _logger.LogInformation("Processing file: {FileName}", fileName);
 
-                        string destinationPath = Path.Combine(correctFolder, fileName);
-                        File.Move(file, destinationPath);
-                        _logger.LogInformation("Moved to correct folder: {FileName}", fileName);
+                            string destinationPath = Path.Combine(correctFolder, fileName);
+                            File.Move(file, destinationPath);
+                            _logger.LogInformation("Moved to correct folder: {FileName}", fileName);
+                        }
+                        else
+                        {
+                            File.AppendAllText(sampleFolder, "Appended text using AppendAllText method.");
+                            _logger.LogInformation("Content appended to sample.txt.");
+
+                            string destinationPath = Path.Combine(errorFolder, fileName);
+                            File.Move(file, destinationPath);
+                            _logger.LogWarning("Moved to error folder: {FileName}", fileName);
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        File.AppendAllText(sampleFolder, "Appended text using AppendAllText method."); // Write
-                        _logger.LogInformation("Content appended to sample.txt.");
-
-                        string destinationPath = Path.Combine(errorFolder, fileName);
-                        File.Move(file, destinationPath);
-                        _logger.LogWarning("Moved to error folder: {FileName}", fileName);
+                        _logger.LogError(ex, "Error processing file {FileName}", fileName);
                     }
                 }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error processing file {FileName}", fileName);
-                }
+            }
+            finally
+            {
+                _logger.LogInformation("Ending {MethodName}", nameof(ProcessFiles));
             }
         }
 
         public void RenameFile(string oldFilePath, string newFilePath)
         {
+            _logger.LogInformation("Starting {MethodName}", nameof(RenameFile));
             try
             {
                 if (File.Exists(oldFilePath))
@@ -58,11 +66,11 @@ namespace FileProcessorConsoleApp.Components
                     File.Move(oldFilePath, newFilePath);
                     _logger.LogInformation("File renamed from {OldFilePath} to {NewFilePath}.", oldFilePath, newFilePath);
 
-                    string name = Path.GetFileName(newFilePath); // Get file name
+                    string name = Path.GetFileName(newFilePath);
                     _logger.LogInformation("New file name: {FileName}", name);
 
                     FileInfo fileInfo = new FileInfo(newFilePath);
-                    long fileSize = fileInfo.Length; // File size
+                    long fileSize = fileInfo.Length;
                     _logger.LogInformation("File size: {FileSize} bytes", fileSize);
                 }
                 else
@@ -70,14 +78,15 @@ namespace FileProcessorConsoleApp.Components
                     _logger.LogWarning("File not found: {OldFilePath}", oldFilePath);
                 }
             }
-            catch (Exception ex)
+            finally
             {
-                _logger.LogError(ex, "Error renaming file from {OldFilePath} to {NewFilePath}", oldFilePath, newFilePath);
+                _logger.LogInformation("Ending {MethodName}", nameof(RenameFile));
             }
         }
 
         public void DeleteFile(string filePath)
         {
+            _logger.LogInformation("Starting {MethodName}", nameof(DeleteFile));
             try
             {
                 if (File.Exists(filePath))
@@ -90,14 +99,15 @@ namespace FileProcessorConsoleApp.Components
                     _logger.LogWarning("File not found for deletion: {FilePath}", filePath);
                 }
             }
-            catch (Exception ex)
+            finally
             {
-                _logger.LogError(ex, "Error deleting file: {FilePath}", filePath);
+                _logger.LogInformation("Ending {MethodName}", nameof(DeleteFile));
             }
         }
 
         public void ReadAndWrite(string sourceFilePath, string destinationFilePath)
         {
+            _logger.LogInformation("Starting {MethodName}", nameof(ReadAndWrite));
             try
             {
                 if (File.Exists(sourceFilePath))
@@ -111,14 +121,15 @@ namespace FileProcessorConsoleApp.Components
                     _logger.LogWarning("Source file not found: {SourceFilePath}", sourceFilePath);
                 }
             }
-            catch (Exception ex)
+            finally
             {
-                _logger.LogError(ex, "Error reading from {SourceFilePath} or writing to {DestinationFilePath}", sourceFilePath, destinationFilePath);
+                _logger.LogInformation("Ending {MethodName}", nameof(ReadAndWrite));
             }
         }
 
         public string[] GetFilesByExtension(string directoryPath, string fileExtension)
         {
+            _logger.LogInformation("Starting {MethodName}", nameof(GetFilesByExtension));
             try
             {
                 if (Directory.Exists(directoryPath))
@@ -133,18 +144,18 @@ namespace FileProcessorConsoleApp.Components
                     return Array.Empty<string>();
                 }
             }
-            catch (Exception ex)
+            finally
             {
-                _logger.LogError(ex, "Error retrieving files from directory: {DirectoryPath}", directoryPath);
-                return Array.Empty<string>();
+                _logger.LogInformation("Ending {MethodName}", nameof(GetFilesByExtension));
             }
         }
 
         public string CreateNewExecutionFile(string directoryPath, string baseFileName, string extension)
         {
+            _logger.LogInformation("Starting {MethodName}", nameof(CreateNewExecutionFile));
             try
             {
-                Directory.CreateDirectory(directoryPath); // Ensure directory exists
+                Directory.CreateDirectory(directoryPath);
                 string[] files = Directory.GetFiles(directoryPath, $"{baseFileName}*{extension}");
                 int nextNumber = 1;
 
@@ -167,10 +178,9 @@ namespace FileProcessorConsoleApp.Components
 
                 return newFilePath;
             }
-            catch (Exception ex)
+            finally
             {
-                _logger.LogError(ex, "Error creating new execution file in {DirectoryPath}", directoryPath);
-                return string.Empty;
+                _logger.LogInformation("Ending {MethodName}", nameof(CreateNewExecutionFile));
             }
         }
     }

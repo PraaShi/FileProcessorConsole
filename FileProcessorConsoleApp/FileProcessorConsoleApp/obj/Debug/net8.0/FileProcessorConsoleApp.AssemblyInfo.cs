@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileProcessorConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8b44f87ef856f3ad6178d7ade992283541877a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eae4dc79849e4318661f6b5ec3ce4534e6b7ffc2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileProcessorConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileProcessorConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
