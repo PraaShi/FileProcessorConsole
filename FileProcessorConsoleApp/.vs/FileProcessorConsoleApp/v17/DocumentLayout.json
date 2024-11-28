@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|solutionrelative:fileprocessorconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|c:\\users\\1000075326\\downloads\\task\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|solutionrelative:fileprocessorconsoleapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|c:\\users\\1000075326\\downloads\\task\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\components\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|solutionrelative:fileprocessorconsoleapp\\components\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|c:\\users\\1000075326\\downloads\\task\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\fileprocessorconsoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|solutionrelative:fileprocessorconsoleapp\\fileprocessorconsoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|c:\\users\\1000075326\\downloads\\task\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|solutionrelative:fileprocessorconsoleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FileProcessorConsoleApp",
-              "DocumentMoniker": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj",
-              "RelativeDocumentMoniker": "FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj",
-              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj",
-              "RelativeToolTip": "FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-27T09:58:24.347Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\appsettings.json",
+              "RelativeDocumentMoniker": "FileProcessorConsoleApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\appsettings.json",
+              "RelativeToolTip": "FileProcessorConsoleApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-28T10:07:06.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\App.config",
-              "RelativeDocumentMoniker": "FileProcessorConsoleApp\\App.config",
-              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\App.config",
-              "RelativeToolTip": "FileProcessorConsoleApp\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-27T10:10:27.082Z",
+              "Title": "FileOperations.cs",
+              "DocumentMoniker": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Components\\FileOperations.cs",
+              "RelativeDocumentMoniker": "FileProcessorConsoleApp\\Components\\FileOperations.cs",
+              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Components\\FileOperations.cs",
+              "RelativeToolTip": "FileProcessorConsoleApp\\Components\\FileOperations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T09:06:58.512Z",
               "EditorCaption": ""
             },
             {
@@ -56,9 +56,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Program.cs",
               "RelativeDocumentMoniker": "FileProcessorConsoleApp\\Program.cs",
-              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Program.cs*",
-              "RelativeToolTip": "FileProcessorConsoleApp\\Program.cs*",
-              "ViewState": "AgIAABEAAACAMzMzM7MhwCEAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Program.cs",
+              "RelativeToolTip": "FileProcessorConsoleApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T09:39:19.488Z",
               "EditorCaption": ""

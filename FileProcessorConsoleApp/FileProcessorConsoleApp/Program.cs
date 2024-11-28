@@ -1,14 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using System.Configuration;
+using Microsoft.Extensions.Logging;
 using System.IO;
 
 namespace FileProcessorConsoleApp
 {
     class Program
     {
+        private static ILogger logger;
         static void Main(string[] args)
         {
+
            string baseFolder = ConfigurationManager.AppSettings["BaseFolder"];
 
             string inputFolder = Path.Combine(baseFolder, "Input");
@@ -22,31 +25,66 @@ namespace FileProcessorConsoleApp
 
             Console.WriteLine("File Processing Processed");
 
-            ProcessFiles(inputFolder, correctFolder , errorFolder,sampleFolder);
+            ProcessFiles(inputFolder, correctFolder, errorFolder,sampleFolder);
 
-            //Renaming
-            string OldFilePath = @"C:\Users\1000075326\Downloads\example\OldFileName.txt";
-            string NewFilePath = @"C:\Users\1000075326\Downloads\example\NewFileName.txt";
+            //---------Renaming
+            RenameTheFileName();
 
-            if (File.Exists(OldFilePath))
+            //--------Deleting
+            DeleteFile();
+
+            //--------Read and write
+            ReadAndWrite();
+
+            //---------Get all the files with specific location
+            string fileExtension = "*.txt";
+            string path = "C:\\Users\\1000075326\\Downloads\\example";
+
+            string[] files = Directory.GetFiles(path,fileExtension);
+            Console.WriteLine("Below is the list of text files");
+            foreach (string file in files)
             {
-                File.Move(OldFilePath, NewFilePath);
-                Console.WriteLine("File Renaming Successful");
+                Console.WriteLine(file);
             }
 
-            //Deleting
-            string DeletingFile = @"C:\Users\1000075326\Downloads\example\DeleteMe.txt";
-            if (File.Exists(DeletingFile)) 
+            Console.WriteLine("ENTER YEAR:");
+            string yearInput = Console.ReadLine();
+
+            Console.WriteLine("ENTER Month:");
+            string monthInput = Console.ReadLine();
+
+            try
             {
-                File.Delete(DeletingFile);
+                if(int.TryParse(yearInput,out int year) && int.TryParse(monthInput, out int month))
+                {
+                    string result = GetLastDateOfMonth(year, month);
+                    Console.WriteLine(result);
+                }
+                else
+                {
+                    Console.WriteLine("INVALID INPUT");
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("An error occured");
             }
 
-            //Read and write
-            string sample1Path = @"C:\Users\1000075326\Downloads\example\sample.txt";
-            string sample2Path = @"C:\Users\1000075326\Downloads\example\sample2.txt";
-            string content = File.ReadAllText(sample1Path);
-            File.WriteAllText(sample2Path, content);
+            //Creating a new file and Incrementing on every iteration
+            string DirectoryPath = "C:\\Users\\1000075326\\Downloads\\example";
+            string BaseFileName = "ExecutionFile";
+            string Extension = ".txt";
 
+            try
+            {
+                Directory.CreateDirectory(DirectoryPath);
+                string newFilePath = CreateNewExecutionFile(DirectoryPath, BaseFileName, Extension);
+                Console.WriteLine(newFilePath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
 
             Console.WriteLine("Completed");
             Console.ReadKey();
@@ -68,6 +106,7 @@ namespace FileProcessorConsoleApp
                         string destinationPath = Path.Combine(correctFolder, fileName);
                         File.Move(file, destinationPath);
                         Console.WriteLine($"Moved to correct folder : {fileName}");
+                        Console.WriteLine("the file name is {}");
                         
                     }
                     else
@@ -81,6 +120,81 @@ namespace FileProcessorConsoleApp
                 }
                 catch (Exception ex) { Console.WriteLine(ex.ToString()); }
             }
+        }
+
+        static string GetLastDateOfMonth(int year,int month)
+        {
+            if(year > 0 && month >=1 && month <= 12)
+            {
+                int lastDay = DateTime.DaysInMonth(year, month);
+                DateTime lastDate = new DateTime(year, month, lastDay);
+                return $"the last date of the month is {lastDate}";
+            }
+            else
+            {
+                return "Invalid month or year";
+            }
+        }
+
+        static string CreateNewExecutionFile(string directoryPath, string baseFileName,string extension)
+        {
+            string[] files = Directory.GetFiles(directoryPath,$"{baseFileName}*{extension}");
+            int nextNumber = 1;
+            
+            if(files.Length > 0) 
+            {
+                nextNumber = files.Select
+                    (file =>
+                    {
+                        string fileName = Path.GetFileNameWithoutExtension(file);
+                        string numberPart = fileName.Replace(baseFileName, "");
+                        return int.TryParse(numberPart,out int num) ? num : 0;
+                    })
+                    .Max() + 1;
+            }
+            string newFileName = $"{baseFileName}{nextNumber}{extension}";
+            string newFilePath = Path.Combine(directoryPath, newFileName);
+            File.WriteAllText(newFilePath, $"This is the execution number {nextNumber}");
+            return newFilePath;
+        }
+
+        static void RenameTheFileName()
+        {
+            string OldFilePath = @"C:\Users\1000075326\Downloads\example\OldFileName.txt";
+            string NewFilePath = @"C:\Users\1000075326\Downloads\example\NewFileName.txt";
+
+            if (File.Exists(OldFilePath))
+            {
+                File.Move(OldFilePath, NewFilePath);
+                Console.WriteLine("File Renaming Successful");
+            }
+
+
+            string name = Path.GetFileName(NewFilePath); //Getting File Name
+            Console.WriteLine(name);
+
+            FileInfo fileInfo = new FileInfo(NewFilePath);
+            long fileSize = fileInfo.Length; //File Size
+            Console.WriteLine("the size of the file is: ");
+            Console.WriteLine(fileSize);
+        }
+
+        static void DeleteFile()
+        {
+            string DeletingFile = @"C:\Users\1000075326\Downloads\example\DeleteMe.txt";
+            if (File.Exists(DeletingFile))
+            {
+                File.Delete(DeletingFile);
+                Console.WriteLine("File Deleted Successfully");
+            }
+        }
+
+        static void ReadAndWrite()
+        {
+            string sample1Path = @"C:\Users\1000075326\Downloads\example\sample.txt";
+            string sample2Path = @"C:\Users\1000075326\Downloads\example\sample2.txt";
+            string content = File.ReadAllText(sample1Path);
+            File.WriteAllText(sample2Path, content);
         }
     }
 }
