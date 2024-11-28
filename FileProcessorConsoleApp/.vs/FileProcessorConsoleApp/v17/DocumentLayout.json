@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\",
+  "WorkspaceRootPath": "D:\\Task2\\FileProcessorConsole\\FileProcessorConsoleApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|c:\\users\\1000075326\\downloads\\task\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|d:\\task2\\fileprocessorconsole\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|solutionrelative:fileprocessorconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|c:\\users\\1000075326\\downloads\\task\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\components\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|d:\\task2\\fileprocessorconsole\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\components\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|solutionrelative:fileprocessorconsoleapp\\components\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|c:\\users\\1000075326\\downloads\\task\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|d:\\task2\\fileprocessorconsole\\fileprocessorconsoleapp\\fileprocessorconsoleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{051AC57B-9154-4CB1-AFBC-A639503DC604}|FileProcessorConsoleApp\\FileProcessorConsoleApp.csproj|solutionrelative:fileprocessorconsoleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -22,17 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\appsettings.json",
+              "DocumentMoniker": "D:\\Task2\\FileProcessorConsole\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\appsettings.json",
               "RelativeDocumentMoniker": "FileProcessorConsoleApp\\appsettings.json",
-              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\appsettings.json",
+              "ToolTip": "D:\\Task2\\FileProcessorConsole\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\appsettings.json",
               "RelativeToolTip": "FileProcessorConsoleApp\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-28T10:07:06.945Z",
               "EditorCaption": ""
@@ -41,11 +45,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FileOperations.cs",
-              "DocumentMoniker": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Components\\FileOperations.cs",
+              "DocumentMoniker": "D:\\Task2\\FileProcessorConsole\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Components\\FileOperations.cs",
               "RelativeDocumentMoniker": "FileProcessorConsoleApp\\Components\\FileOperations.cs",
-              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Components\\FileOperations.cs",
+              "ToolTip": "D:\\Task2\\FileProcessorConsole\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Components\\FileOperations.cs",
               "RelativeToolTip": "FileProcessorConsoleApp\\Components\\FileOperations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T09:06:58.512Z",
               "EditorCaption": ""
@@ -54,14 +58,28 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Program.cs",
+              "DocumentMoniker": "D:\\Task2\\FileProcessorConsole\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Program.cs",
               "RelativeDocumentMoniker": "FileProcessorConsoleApp\\Program.cs",
-              "ToolTip": "C:\\Users\\1000075326\\Downloads\\Task\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Program.cs",
+              "ToolTip": "D:\\Task2\\FileProcessorConsole\\FileProcessorConsoleApp\\FileProcessorConsoleApp\\Program.cs",
               "RelativeToolTip": "FileProcessorConsoleApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T09:39:19.488Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }
